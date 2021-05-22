@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title> Automated Service Menu for Restaurants</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dining.css">
+    <link rel="stylesheet" href="../css/MenuStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script async src="//jsfiddle.net/wrappixel/dorh8wyc/embed/"></script>
+    <link rel="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+</head>
+<body>
+   <!----Nav bar--->
+   <section class="BG light">
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../img/MHlogo.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../menu.html">MENU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#cart">ORDER CART (<span class="total-count"></span>)</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section> 
+
+<!-- Modal -->
+<div class="modal" id="cart">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h5 class="modal-title">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          close
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+
+        </table>
+        <div>Total price: ₱<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue Ordering</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- dish section starts  -->
+
+  <section id="dish" class="width container">
+
+  <div class = "BG caption light">
+    <h1 class="text-center">Enjoy our burgers made just for you!</h1>
+</div>
+
+<!--items-->
+
+
+<div class = 'container'>
+<div class = 'row'>
+
+  <div class = 'col-md-4 col-lg-4'>
+    <form>
+    <div class="card" style="width: 18rem;">
+        <img src="../img/burger menu/b1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">Vegan Burger</h3>
+            <p>Vegan patty with onions, tomatoes, mayo and cheese</p>
+            <h4 class="card-text">₱299.00</h4>
+            <a href="#" data-name="Vegan Burger" data-price="299.00" class="add-to-cart btn btn-primary">
+              Add to cart<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            </a>
+       
+      </div>
+        </div>
+      </form>
+      </div>
+
+  <div class = 'col-md-4 col-lg-4'>
+    <div class="card" style="width: 18rem;">
+        <img src="../img/burger menu/b2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">Chicken Burger</h3>
+          <p>Chicken patty with french fries, lettuce, mayo</p>
+          <h4 class="card-text">₱249.00</h4>
+         
+          <a href="#" data-name="Chicken Burger" data-price="249.00" class="add-to-cart btn btn-primary">
+            Add to cart<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          </a>
+
+        </div>
+      </div>
+  </div>
+
+  <div class = 'col-md-4 col-lg-4'>
+    <div class="card" style="width: 18rem;">
+        <img src="../img/burger menu/b3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">Bacon Overload</h3>
+          <p>Double beef patty with bacon, cheese and mayo</p>
+          <h4 class="card-text">₱299.00</h4>
+         
+          <a href="#" data-name="Bacon Overload" data-price="299.00" class="add-to-cart btn btn-primary">
+            Add to cart<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          </a>
+
+        </div>
+      </div>
+  </div>
+  
+  <div class = 'col-md-4 col-lg-4'>
+    <div class="card" style="width: 18rem;">
+        <img src="../img/burger menu/b4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">Quarter Pounder Burger</h3>
+          <p>Single beef patty with tomatoes, lettuce, pickles, cheese and mayo</p>
+          <h4 class="card-text">₱249.00</h4>
+        
+          <a href="#" data-name="Quarter Pounder Burger" data-price="249.00" class="add-to-cart btn btn-primary">
+            Add to cart<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          </a>
+
+        </div>
+      </div>
+  </div>
+
+  <div class = 'col-md-4 col-lg-4'>
+    <div class="card" style="width: 18rem;">
+        <img src="../img/burger menu/b5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">Cheeseburger Sliders</h3>
+          <p>Lean ground beef with dinner rolls, pickles, cheese</p>
+          <h4 class="card-text">₱125.00</h4>
+         
+          <a href="#" data-name="Cheeseburger Sliders" data-price="125.00" class="add-to-cart btn btn-primary">
+            Add to cart<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class = 'col-md-4 col-lg-4'>
+      <div class="card" style="width: 18rem;">
+          <img src="../img/burger menu/b6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+           
+            <h3 class="card-title">Cheesy Chicken Burger</h3>
+            <p>Chicken patty with lettuce, tomatoes, pickles, cheese & mayo </p>
+            <h4 class="card-text">₱149.00</h4>
+            
+
+            <a href="#" data-name="Cheesy Chicken Burger" data-price="149.00" class="add-to-cart btn btn-primary">
+              Add to cart<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            </a>
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+</section>
+
+<!-- dish section ends  -->
+</body>
+
+ <!--Footer--> 
+ <footer>
+  <div class= "footer-top">
+     <div class="row">
+   
+       <div class="col-md-3 colsm-6 col-xs-12 segment-one">
+         <h2> MOON HIVE</h2>
+         <ul>
+           <li><a href="#">About us</a></li>
+           <li><a href="#">Stores</a></li>
+           <li><a href="#">Blog</a></li>
+
+         </ul>
+       </div>
+       <div class="col-md-3 colsm-6 col-xs-12 segment-two">
+         <h2> Support</h2>
+         <ul>
+           <li><a href="#">Contact us</a></li>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">Privacy Policy</a></li>
+
+         </ul>
+       </div>
+       <div class="col-md-3 colsm-6 col-xs-12 segment-three">
+         <h2> Follow us</h2>
+         <ul>
+           <a href="#"><i class="fa fa-facebook"></i></a>
+           <a href="#"><i class="fa fa-twitter"></i></a>
+           <a href="#"><i class="fa fa-instagram"></i></a>
+           <a href="#"><i class="fa fa-vimeo"></i></a>
+         </ul>
+       </div>
+       <div class="col-md-3 colsm-6 col-xs-12 segment-four">
+         <h2> Join our newsletter</h2>
+         <form action="">
+           <input type="email" placeholder="Enter your email address">
+           <input type="submit" value ="subscribe">
+         </form>
+       </div>
+     </div>
+  </div>
+  <p class ="footer-bottom-text">All Rights reserved by &copy; Synerple 2021</p>
+</footer>
+<script src="cart.js"></script>
+</html>
